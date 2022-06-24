@@ -10,9 +10,9 @@
 
 const pension = (age) => {
   const pensionAge = 65;
-  let currentDate = new Date();
-  let pensionYearIs = currentDate.getFullYear() - age + pensionAge;
-  let yearsToPension = pensionAge - age;
+  const currentDate = new Date();
+  const pensionYearIs = currentDate.getFullYear() - age + pensionAge;
+  const yearsToPension = pensionAge - age;
   console.log(`${yearsToPension}, ${pensionYearIs}`);
 };
 
