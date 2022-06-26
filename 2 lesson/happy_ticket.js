@@ -8,19 +8,20 @@
 
 let num = prompt('Enter ticket number:');
 
-const correctInput = (num) => {
-  isNaN(num) || num.toString().length !== 6
-    ? alert(`It's not valid number`)
-    : num;
-};
-correctInput(num);
+// // const correctInput = (num) => {
+// //   isNaN(num) || num.toString().length !== 6
+// //     ? alert(`It's not valid number`)
+// //     : num;
+// // };
+// // correctInput(num);
 
-let ticketNum = num.toString();
+// // let ticketNum = num.toString();
 
-function check(ticketNum) {
+function check(num) {
+  let ticketNum = num.toString();
   const partFirst = () => {
     let countFirst = 0;
-    for (let i = 0; i <= 2; i++) {
+    for (let i = 0; i < Math.ceil(ticketNum.length / 2); i++) {
       countFirst += Number(ticketNum[i]);
     }
     return countFirst;
@@ -28,7 +29,11 @@ function check(ticketNum) {
 
   const partSecond = () => {
     let countSecond = 0;
-    for (let i = 3; i <= 5; i++) {
+    for (
+      let i = Math.ceil(ticketNum.length / 2);
+      i <= ticketNum.length - 1;
+      i++
+    ) {
       countSecond += Number(ticketNum[i]);
     }
     return countSecond;
@@ -38,4 +43,4 @@ function check(ticketNum) {
     ? alert(`It's not happy ticket :(`)
     : alert(`You have HAPPY TICKET - Eat it! :D`);
 }
-check(ticketNum);
+check(num);
