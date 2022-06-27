@@ -6,41 +6,55 @@
  * Виведіть повідомлення про "щасливість" квитка користувачеві.
  */
 
+
+//!Варіант Array
+
 let num = prompt('Enter ticket number:');
 
-// // const correctInput = (num) => {
-// //   isNaN(num) || num.toString().length !== 6
-// //     ? alert(`It's not valid number`)
-// //     : num;
-// // };
-// // correctInput(num);
+function check (num) {
+    if ((num.toString()).length !== 6 || isNaN(num)) {
+        alert(`It's not correct number, chek it again`)
+    } else {
+        const numStr = num.toString();
+        const arrFirst = numStr.split('', 3);
+        const arrSecond = numStr.slice(3, 6).split('');
 
-// // let ticketNum = num.toString();
+        const sumFirst = arrFirst.reduce((acc, value) => Number(acc) + Number(value));
+        const sumSecond = arrSecond.reduce((el, value) => Number(el) + Number(value));
 
-function check(num) {
-  let ticketNum = num.toString();
-  const partFirst = () => {
-    let countFirst = 0;
-    for (let i = 0; i < Math.ceil(ticketNum.length / 2); i++) {
-      countFirst += Number(ticketNum[i]);
+        sumFirst !==sumSecond ? alert(`It's not happy ticket :(`) : alert(`You have HAPPY TICKET - Eat it! :D`)
     }
-    return countFirst;
-  };
-
-  const partSecond = () => {
-    let countSecond = 0;
-    for (
-      let i = Math.ceil(ticketNum.length / 2);
-      i <= ticketNum.length - 1;
-      i++
-    ) {
-      countSecond += Number(ticketNum[i]);
-    }
-    return countSecond;
-  };
-
-  partFirst() !== partSecond()
-    ? alert(`It's not happy ticket :(`)
-    : alert(`You have HAPPY TICKET - Eat it! :D`);
 }
-check(num);
+check(num)
+
+//!Варіант String
+
+// let numb = prompt('Enter ticket number:');
+
+// function check(numb) {
+//   let ticketNum = numb.toString();
+//   const partFirst = () => {
+//     let countFirst = 0;
+//     for (let i = 0; i < Math.ceil(ticketNum.length / 2); i++) {
+//       countFirst += Number(ticketNum[i]);
+//     }
+//     return countFirst;
+//   };
+
+//   const partSecond = () => {
+//     let countSecond = 0;
+//     for (
+//       let i = Math.ceil(ticketNum.length / 2);
+//       i <= ticketNum.length - 1;
+//       i++
+//     ) {
+//       countSecond += Number(ticketNum[i]);
+//     }
+//     return countSecond;
+//   };
+
+//   partFirst() !== partSecond()
+//     ? alert(`It's not happy ticket :(`)
+//     : alert(`You have HAPPY TICKET - Eat it! :D`);
+// }
+// check(numb);
