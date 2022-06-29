@@ -17,15 +17,21 @@ function check (num) {
     } else {
         const numStr = num.toString();
         const arrFirst = numStr.split('', 3);
-        const arrSecond = numStr.slice(3, 6).split('');
+        const arrSecond = numStr.slice(3).split('');
+        console.log(arrFirst);
+        console.log(arrSecond);
 
         const sumFirst = arrFirst.reduce((acc, value) => Number(acc) + Number(value));
-        const sumSecond = arrSecond.reduce((el, value) => Number(el) + Number(value));
-
+        const sumSecond = arrSecond.reduce((acc, value) => Number(acc) + Number(value));
+        console.log(sumFirst);
+        console.log(sumSecond);
         sumFirst !==sumSecond ? alert(`It's not happy ticket :(`) : alert(`You have HAPPY TICKET - Eat it! :D`)
     }
 }
-check(num)
+check(num);
+
+
+
 
 //!Варіант String
 

@@ -15,17 +15,43 @@
  * "ABBA" -> 2 # 'A' та 'B' 
  */
 
-let enterStr = 'Аabbcde'
-let str = enterStr.toLocaleLowerCase();
-let strArr = str.split('');
-let result = strArr.forEach((strArr[i], i , i++))
+const enterStr = 'aaAbbcd'
+const str = enterStr.toLocaleLowerCase();
+const strArr = str.split('');
+const res = strArr.reduce((acc, cur) => {
+    if (acc[cur] === undefined) {
+        acc[cur] = 1;
+    } else {
+        acc[cur]++;
+    }
+    return acc;
+}, new Object());
+
+console.log(res)
+
+    
+// let entries = Object.entries(res)
+// console.log(entries);
+
+// let data = entries.map( ([key, val] = entry) => {
+//     if (entries.val > 1){
+//         return `The ${key} is ${val}`;
+//     }
+// //   return `The ${key} is ${val}`;
+// });
+//  console.log(data);
 
 
 
-console.log(strArr)
-console.log(result)
 
-//Array<string>.forEach(callbackfn: (value: string, index: number, array: string[]) => void, thisArg?: any): void
-// @param callbackfn — A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
 
-// @param thisArg — An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+
+
+
+
+
+
+
+
+
+
