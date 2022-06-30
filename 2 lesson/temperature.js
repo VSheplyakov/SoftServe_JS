@@ -13,3 +13,13 @@
      : alert(`Celsius converted to Fahrenheit is: ${temp = temp * 9/5 + 32}`);
  };
  convertCelToFar(temp);
+
+
+//  let temp = '0';
+
+//  const convertCelToFar = (temp) => {
+//    isNaN(temp)
+//      ? console.log(`It's not valid value`)
+//      : console.log(`Celsius converted to Fahrenheit is: ${temp = temp * 9/5 + 32}`);
+//  };
+//  convertCelToFar(temp);

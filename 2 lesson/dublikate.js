@@ -30,16 +30,6 @@ const res = strArr.reduce((acc, cur) => {
 console.log(res)
 
     
-// let entries = Object.entries(res)
-// console.log(entries);
-
-// let data = entries.map( ([key, val] = entry) => {
-//     if (entries.val > 1){
-//         return `The ${key} is ${val}`;
-//     }
-// //   return `The ${key} is ${val}`;
-// });
-//  console.log(data);
 
 
 

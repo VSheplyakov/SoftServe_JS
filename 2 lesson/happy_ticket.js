@@ -12,23 +12,26 @@
 let num = prompt('Enter ticket number:');
 
 function check (num) {
+    const ANSWER = {
+        NAN: `It's not correct number, chek it again`,
+        UNHAPPY: `It's not happy ticket :(`,
+        HAPPY: `You have HAPPY TICKET - Eat it! :D`,
+    }    
+        
     if ((num.toString()).length !== 6 || isNaN(num)) {
-        alert(`It's not correct number, chek it again`)
-    } else {
-        const numStr = num.toString();
-        const arrFirst = numStr.split('', 3);
-        const arrSecond = numStr.slice(3).split('');
-        console.log(arrFirst);
-        console.log(arrSecond);
-
-        const sumFirst = arrFirst.reduce((acc, value) => Number(acc) + Number(value));
-        const sumSecond = arrSecond.reduce((acc, value) => Number(acc) + Number(value));
-        console.log(sumFirst);
-        console.log(sumSecond);
-        sumFirst !==sumSecond ? alert(`It's not happy ticket :(`) : alert(`You have HAPPY TICKET - Eat it! :D`)
+        return ANSWER.NAN;
     }
+
+    const numStr = num.toString();
+    const arrFirst = numStr.split('', 3);
+    const arrSecond = numStr.slice(3).split('');
+    const sumFirst = arrFirst.reduce((acc, value) => Number(acc) + Number(value));
+    const sumSecond = arrSecond.reduce((acc, value) => Number(acc) + Number(value));
+    
+    return ANSWER[sumFirst === sumSecond ? 'HAPPY' : 'UNHAPPY'];
 }
-check(num);
+
+alert(check(num));
 
 
 
