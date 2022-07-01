@@ -21,6 +21,7 @@ function sort(price, capacity) {
   }
   return bestResult;
 }
+ sortArr
 
 
 const price = ['5', 1, '2'];

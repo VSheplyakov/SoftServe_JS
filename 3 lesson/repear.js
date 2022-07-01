@@ -21,7 +21,7 @@ function countCanOfPaint() {
   console.log(l) 
   console.log(typeof w)
   console.log(w) 
-  const result = Math.ceil((l + w) * h * 2 / oneCanOfPaint);
+  const result = Math.ceil((l + w) * 2 * h / oneCanOfPaint);
 
   outputValue.innerHTML = `Для пофарбування заданого приміщення необхідно - ${result}`;
 }
