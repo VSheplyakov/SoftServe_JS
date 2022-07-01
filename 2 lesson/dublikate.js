@@ -15,33 +15,20 @@
  * "ABBA" -> 2 # 'A' та 'B' 
  */
 
-const enterStr = 'aaAbbcd'
+const enterStr = 'indivisibility'
 const str = enterStr.toLocaleLowerCase();
 const strArr = str.split('');
 const res = strArr.reduce((acc, cur) => {
-    if (acc[cur] === undefined) {
-        acc[cur] = 1;
-    } else {
+    if (acc[cur] !== undefined ) {
         acc[cur]++;
+    } else {
+        acc[cur] = 1;
     }
     return acc;
 }, new Object());
 
-console.log(res)
+console.log(res);
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for (let entry of res) {
+    console.log(entry);
+}
