@@ -11,18 +11,49 @@
 // weight - w 0-1000
 // h - 0-1000
 
-function countCanOfPaint() {
-  const oneCanOfPaint = 16;
-  const l = Number(document.querySelector('.hero__input-l'));
-  const w = parseInt(document.querySelector('.hero__input-w'));
-  const h = Number(document.querySelector('.hero__input-h'));
-  const outputValue = document.querySelector('.hero__reply-value');
-  console.log(typeof l)
-  console.log(l) 
-  console.log(typeof w)
-  console.log(w) 
-  const result = Math.ceil((l + w) * 2 * h / oneCanOfPaint);
+// function countCanOfPaint() {
+//   const oneCanOfPaint = 16;
+//   const l = Number(document.querySelector('.hero__input-l'));
+//   const w = parseInt(document.querySelector('.hero__input-w'));
+//   const h = Number(document.querySelector('.hero__input-h'));
+//   const outputValue = document.querySelector('.hero__reply-value');
+// //   console.log(typeof l)
+// //   console.log(l) 
+// //   console.log(typeof w)
+// //   console.log(w) 
+// //   console.log(typeof h)
+// //   console.log(h) 
+//   const result = Math.ceil((l + w) * 2 * h / oneCanOfPaint);
 
-  outputValue.innerHTML = `Для пофарбування заданого приміщення необхідно - ${result}`;
+//   outputValue.innerHTML = `Для пофарбування заданого приміщення необхідно - ${result}`;
+// }
+// countCanOfPaint();
+
+
+const DOM = {
+  inpL : document.querySelector('.hero__input-l'),
+  inpH : document.querySelector('.hero__input-h'),
+  inpW : document.querySelector('.hero__input-w'),
+  out : document.querySelector('.hero__reply-value'),
+  btnCount : document.querySelector('.hero__question-button')
+};
+
+function getNumberFromInput(inp){
+  return Number(inp.value);
 }
+
+function countCanOfPaint() {
+  const ONE_CAN_OF_PAINT = 16;
+  
+  const l = getNumberFromInput(DOM.inpL);
+  const w = getNumberFromInput(DOM.inpW);
+  const h = getNumberFromInput(DOM.inpH);
+
+  const result = Math.ceil((l + w) * 2 * h / ONE_CAN_OF_PAINT);
+
+  DOM.out.innerHTML = `Для пофарбування заданого приміщення необхідно - ${result}`;
+}
+
 countCanOfPaint();
+
+DOM.btnCount.addEventListener('click', countCanOfPaint);
