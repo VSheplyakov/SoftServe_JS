@@ -25,7 +25,7 @@ let arr = [
 
 function ttt(arr) {
   for (let i = 0; i < arr.length; i++) {
-    // if (arr[i].includes(0)) return console.log('-1');
+    if (arr[i].includes(0)) return console.log('-1');
     if (
       ((arr[0][0] === arr[0][1]) === arr[0][2] ||
         (arr[1][0] === arr[1][1]) === arr[1][2] ||
@@ -37,11 +37,9 @@ function ttt(arr) {
         (arr[0][2] === arr[1][1]) === arr[2][0]) === 1
     )
       return console.log('1');
-      else
   }
   return console.log('2');
 }
-
 
 console.log(ttt(arr));
 
