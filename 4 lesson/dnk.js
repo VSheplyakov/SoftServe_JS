@@ -11,19 +11,38 @@
  * DNA_strand("GTAT") # повертає "CATA"
  */
 
+// function dna(str) {
+//   str = str.toLowerCase();
+//   let result = '';
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === 'a') {
+//       result += 't';
+//     } else if (str[i] === 't') {
+//       result += 'a';
+//     } else if (str[i] === 'g') {
+//       result += 'c';
+//     } else if (str[i] === 'c') {
+//       result += 'g';
+//     }
+//   }
+//   console.log(result.toUpperCase());
+// }
+
+// dna('ATTGCGTATaaaaA');
+
 function dna(str) {
   str = str.toLowerCase();
   let result = '';
   for (let i = 0; i < str.length; i++) {
-    if (str[i] === 'a') {
-      result += 't';
-    } else if (str[i] == 't') {
-      result += 'a';
-    } else if (str[i] == 'g') {
-      result += 'c';
-    } else if (str[i] == 'c') {
-      result += 'g';
-    }
+    str[i] === 'a'
+      ? result += 't'
+      : str[i] === 't'
+      ? result += 'a'
+      : str[i] === 'g'
+      ? result += 'c'
+      : str[i] === 'c'
+      ? result += 'g'
+      : result;
   }
   console.log(result.toUpperCase());
 }
