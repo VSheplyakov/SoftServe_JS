@@ -23,18 +23,20 @@ meeting([['XX', 2], ['XXXX', 6], ['XXXXX', 4]], 0) ---> 'Game On'
             0             2            -1
  */
 
-function meeting(rooms, mustFind) {
-  if (mustFind == 0) return 'Game On';
+function meeting(rooms, chairsNeed) {
+  if (chairsNeed == 0) return 'Game On';
   const result = [];
-  
+
   for (let i = 0; i < rooms.length; i++) {
     if (rooms[i][0].length <= rooms[i][1]) {
       result.push(rooms[i][1] - rooms[i][0].length);
+    } else if (rooms[i][0].length > rooms[i][1]) {
+      result.push(0);
     }
   }
 
   const amount = result.reduce((acc, el) => acc + el);
-  if (amount < mustFind) return 'Not enough';
+  if (amount < chairsNeed) return 'Not enough';
   return result;
 }
 
@@ -45,7 +47,7 @@ console.log(
       ['XXXXX', 6],
       ['XXXXXX', 9],
     ],
-    4   
+    4
   )
 );
 console.log(
