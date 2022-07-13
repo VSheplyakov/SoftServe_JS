@@ -23,23 +23,25 @@ meeting([['XX', 2], ['XXXX', 6], ['XXXXX', 4]], 0) ---> 'Game On'
             0             2            -1
  */
 
-function meeting(rooms, chairsNeeds) {
-  const result = [];
 
-  if (chairsNeeds == 0) return 'Game On';
-
+function meeting(rooms, chairNeed) {
+  if (chairNeed === 0) return 'Game On';
+  let demand = chairNeed;
+  let result = [];
   for (let i = 0; i < rooms.length; i++) {
-    if (rooms[i][0].length <= rooms[i][1]) {
-      result.push(rooms[i][1] - rooms[i][0].length);
-    } else if (rooms[i][0].length > rooms[i][1]) {
-      result.push(0);
-    }
+    if (demand === 0) break;
+    let freeChair = rooms[i][1] - rooms[i][0].length;
+    if (freeChair < 0) {
+      freeChair = 0;
+    } else if (freeChair > demand) freeChair = demand;
+    result.push(freeChair);
+    demand = demand - freeChair;
   }
-
-  if (result.reduce((acc, el) => acc + el) < chairsNeeds) return 'Not enough';
-  
+  if (demand > 0) return 'Not enough!';
   return result;
 }
+
+
 
 console.log(
   meeting(

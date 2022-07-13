@@ -8,17 +8,21 @@ calc(12, 5, '/') //2.4
 calc(1.2, 3, '*') //3.6
  */
 
-
-
 function calc(a, b, c) {
-    c === '+' ? console.log(a + b):
-    c === '-' ? console.log(a - b):
-    c === '*' ? console.log(+(a * b).toFixed(2)): //console.log(typeof (a * b)*10/10):
-    c === '/' ? console.log(+(a / b).toFixed(2)):
-    console.log(`Uncorrect input`);
+  let res = 0;
+  c === '+'
+    ? (res = a + b)
+    : c === '-'
+    ? (res = a - b)
+    : c === '*'
+    ? (res = +(a * b) * 10 / 10)//.toFixed(2))
+    : c === '/'
+    ? (res = +(a / b))
+    : console.log(`Uncorrect input`);
+  console.log(res);
 }
 
-calc(12, 4, '+') //16
-calc(1, 4, '-') //-3
-calc(12, 5, '/') //2.4
-calc(1.2, 3, '*') //3.6
+calc(12, 4, '+'); //16
+calc(1, 4, '-'); //-3
+calc(12, 5, '/'); //2.4
+calc(1.2, 3, '*'); //3.6
