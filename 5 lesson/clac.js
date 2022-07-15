@@ -8,15 +8,15 @@ calc(12, 5, '/') //2.4
 calc(1.2, 3, '*') //3.6
  */
 
-function calc(a, b, c) {
+function calc(a, b, op) {
   let res = 0;
-  c === '+'
+  op === '+'
     ? (res = a + b)
-    : c === '-'
+    : op === '-'
     ? (res = a - b)
-    : c === '*'
+    : op === '*'
     ? (res = +(a * b) * 10 / 10)//.toFixed(2))
-    : c === '/'
+    : op === '/'
     ? (res = +(a / b))
     : console.log(`Uncorrect input`);
   console.log(res);

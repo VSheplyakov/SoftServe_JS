@@ -42,5 +42,3 @@ function ttt(arr) {
 }
 
 console.log(ttt(arr));
-
-
