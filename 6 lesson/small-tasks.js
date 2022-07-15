@@ -113,5 +113,5 @@ transformStr = arr3.map(function (el) {
   }
   return el;
 }
-);
-console.log(transformStr.join(''));
+).join('');
+console.log(transformStr);
