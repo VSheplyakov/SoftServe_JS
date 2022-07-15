@@ -1,0 +1,26 @@
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  color: rgb(248, 239, 239);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 200px;
+  gap: 10px;
+}
+.result {
+  display: flex;
+  font-size: 75px;
+  justify-content: center;
+  margin-top: 50px;
+ 
+}
