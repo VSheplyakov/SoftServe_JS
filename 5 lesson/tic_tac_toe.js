@@ -23,22 +23,57 @@ let arr = [
   [2, 1, 0],
 ];
 
-function ttt(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].includes(0)) return console.log('-1');
-    if (
-      ((arr[0][0] === arr[0][1]) === arr[0][2] ||
-        (arr[1][0] === arr[1][1]) === arr[1][2] ||
-        (arr[2][0] === arr[2][1]) === arr[2][2] ||
-        (arr[0][0] === arr[1][0]) === arr[2][0] ||
-        (arr[0][1] === arr[1][1]) === arr[2][1] ||
-        (arr[0][2] === arr[1][2]) === arr[2][2] ||
-        (arr[0][0] === arr[1][1]) === arr[2][2] ||
-        (arr[0][2] === arr[1][1]) === arr[2][0]) === 1
-    )
-      return console.log('1');
-  }
-  return console.log('2');
-}
+// function ttt(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].includes(0)) return console.log('-1');
+//     if (
+//       ((arr[0][0] === arr[0][1]) === arr[0][2] ||
+//         (arr[1][0] === arr[1][1]) === arr[1][2] ||
+//         (arr[2][0] === arr[2][1]) === arr[2][2] ||
+//         (arr[0][0] === arr[1][0]) === arr[2][0] ||
+//         (arr[0][1] === arr[1][1]) === arr[2][1] ||
+//         (arr[0][2] === arr[1][2]) === arr[2][2] ||
+//         (arr[0][0] === arr[1][1]) === arr[2][2] ||
+//         (arr[0][2] === arr[1][1]) === arr[2][0]) === 1
+//     )
+//       return console.log('1');
+//   }
+//   return console.log('2');
+// }
 
-console.log(ttt(arr));
+// console.log(ttt(arr));
+
+function ticTacToeChecker(arr) {
+  // Your code here
+  let boardArray = arr.split("");
+  let winner = "";
+  let row1 = boardArray[0] + boardArray[1] + boardArray[2];
+  let row2 = boardArray[3] + boardArray[4] + boardArray[5];
+  let row3 = boardArray[6] + boardArray[7] + boardArray[8];
+  let col1 = boardArray[0] + boardArray[3] + boardArray[6];
+  let col2 = boardArray[1] + boardArray[4] + boardArray[7];
+  let col3 = boardArray[2] + boardArray[5] + boardArray[8];
+  let diag1 = boardArray[0] + boardArray[4] + boardArray[8];
+  let diag2 = boardArray[2] + boardArray[4] + boardArray[6];
+  if (row1 === "XXX" || row1 === "OOO") {
+    winner = row1[0];
+  } else if (row2 === "XXX" || row2 === "OOO") {
+    winner = row2[0];
+  } else if (row3 === "XXX" || row3 === "OOO") {
+    winner = row3[0];
+  } else if (col1 === "XXX" || col1 === "OOO") {
+    winner = col1[0];
+  } else if (col2 === "XXX" || col2 === "OOO") {
+    winner = col2[0];
+  } else if (col3 === "XXX" || col3 === "OOO") {
+    winner = col3[0];
+  } else if (diag1 === "XXX" || diag1 === "OOO") {
+    winner = diag1[0];
+  } else if (diag2 === "XXX" || diag2 === "OOO") {
+    winner = diag2[0];
+  }
+  if (winner === "X") { return 1; };
+  if (winner === "O") { return 2; };
+  if (winner === "") { return 0; };
+} 
+ticTacToeChecker(arr)
