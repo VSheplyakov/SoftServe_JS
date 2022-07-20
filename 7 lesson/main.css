@@ -1,0 +1,90 @@
+/* current time */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: green 0px 0px 10px;
+}
+.text {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: green 0px 0px 10px;
+}
+.hours {
+  display: flex;
+}
+.minutes {
+  display: flex;
+}
+.seconds {
+  display: flex;
+}
+/* modal window */
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 30vh;
+}
+
+.modal__window {
+  display: none; /* Hidden by default */
+  position: relative; /* Stay in place */
+  /* z-index: 1; Sit on top */
+  /* left: 0;
+  top: 0; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border: 2px solid #000;
+  width: 350px;
+  height: 150px;
+  background-color: rgba(192, 240, 237, 0.2);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
+  background-color: lightskyblue;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: lightblue;
+  transition: all 0.3s ease;
+}
+
+.input__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+.input__name {
+  margin-top: 10px;
+  width: 350px;
+  font-size: 18px;
+  border-radius: 4px;
+}
