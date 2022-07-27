@@ -19,7 +19,8 @@ class Marker {
     text.color = this.color;
     let q;
     for (let i = 0; i < text.length; i++) {
-      if (text[i] !== ' ') q += 1;
+      if (text[i] !== ' ') 
+      q += 1;
     }
     return (this.countOfToner = this.countOfToner - q * 0.5);
   }
