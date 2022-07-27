@@ -15,12 +15,10 @@ function identify(passport, phoneNumber, pin) {
   /^[a-z]{2}\d{6}$/i.test(passport)
     ? console.log(passport)
     : console.log('Passsport data uncorrect');
-  /^\d{12}$/.test(phoneNumber)
+  /^\+?\d{12}$/.test(phoneNumber)
     ? console.log(phoneNumber)
     : console.log('Phone number data uncorrect');
-  /^\d{10}$/.test(pin)
-    ? console.log(pin)
-    : console.log('Pin data uncorrect');
+  /^\d{10}$/.test(pin) ? console.log(pin) : console.log('Pin data uncorrect');
 }
 
 identify('AA123456', '380673606010', '1234567890');
