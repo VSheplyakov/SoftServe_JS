@@ -12,14 +12,13 @@
 // Вихідні дані: Рядок, що описує, чи підходять введені дані під опис.
 
 function identify(passport, phoneNumber, pin) {
-  passport.length === 8 &&
-  /[a-z]{2}[0-9]{6}/gi.test(passport)
+  /^[a-z]{2}\d{6}$/i.test(passport)
     ? console.log(passport)
     : console.log('Passsport data uncorrect');
-  phoneNumber.length === 12 && /[0-9]{12}/g.test(phoneNumber)
+  /^\d{12}$/.test(phoneNumber)
     ? console.log(phoneNumber)
     : console.log('Phone number data uncorrect');
-  pin.length === 10 && /[0-9]{10}/g.test(pin)
+  /^\d{10}$/.test(pin)
     ? console.log(pin)
     : console.log('Pin data uncorrect');
 }
