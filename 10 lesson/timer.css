@@ -1,0 +1,52 @@
+body {
+  margin: 50px;
+}
+
+.timer__box {
+  display: flex;
+  /* flex-direction:  ; */
+}
+
+.timer__box-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 150px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 54px;
+}
+
+.timer__box-circle {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.timer__box-circle-name {
+  display: flex;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #000;
+}
+
+.timer__buttons {
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px
+}
+.btn {
+  display: block;
+  width: 130px;
+  height: 35px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-left: 50px;
+}
