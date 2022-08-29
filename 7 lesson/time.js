@@ -4,6 +4,10 @@
     let minutes = document.querySelector('.minutes');
     let seconds = document.querySelector('.seconds');
     let date = new Date();
+    
+    let newTime = document.querySelector('.new-time');
+    let date1 = Date();
+    newTime.innerHTML = date1;
 
     if (date.getHours() <= 9) {
       hours.innerHTML = `0${date.getHours()}`;

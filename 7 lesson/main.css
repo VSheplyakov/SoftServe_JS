@@ -4,8 +4,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 20vh;
-  font-size: 100px;
+  height: 35vh;
+  font-size: 70px;
   font-family: 'Roboto', sans-serif;
   text-shadow: green 0px 0px 10px;
 }
@@ -26,6 +26,10 @@
 }
 .seconds {
   display: flex;
+}
+.new-time {
+  display: flex;
+  text-align: center;
 }
 /* modal window */
 .modal {
